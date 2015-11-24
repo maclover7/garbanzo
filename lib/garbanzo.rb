@@ -1,5 +1,5 @@
 require 'garbanzo/version'
 
 module Garbanzo
-  # Your code goes here...
+  autoload :Router, 'garbanzo/router'
 end
