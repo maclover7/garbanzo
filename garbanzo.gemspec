@@ -25,6 +25,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec'
   spec.add_development_dependency 'rubocop'
 
+  spec.add_runtime_dependency 'claide'
+  spec.add_runtime_dependency 'colored'
   spec.add_runtime_dependency 'rack'
   spec.add_runtime_dependency 'tilt'
 end

@@ -6,5 +6,7 @@ Metrics/MethodLength:
   Max: 25
 Style/Documentation:
   Enabled: false
+Style/Lambda:
+  Enabled: false
 Style/RegexpLiteral:
   Enabled: false
