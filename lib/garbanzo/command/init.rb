@@ -43,7 +43,7 @@ module Garbanzo
           templates.each do |template_file, destination_file|
             template_location = "#{@app_templates_directory}/#{template_file}"
             template_erb_template = Tilt['erb'].new(template_location)
-            template_contents = template_erb_template.render(self, name: @name)
+            template_contents = template_erb_template.render(self)
             destination_location = Pathname.pwd + @name + destination_file
             File.open(destination_location, 'w') { |f| f << template_contents }
             puts "[✓] Created #{destination_file}".blue
