@@ -1,1 +1,5 @@
+AllCops:
+  Exclude:
+    - examples/node_modules/**/*
+
 inherit_from: .rubocop_todo.yml

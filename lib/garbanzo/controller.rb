@@ -10,7 +10,7 @@ module Garbanzo
       default_options = { 'scope' => self, 'template_directory' => './views' }
       template_options = options.merge!(default_options)
 
-      if template_directory
+      if self.respond_to?(:template_directory)
         template_options['template_directory'] = template_directory
       end
 
