@@ -2,13 +2,17 @@ require 'rubygems'
 require 'bundler/setup'
 require 'garbanzo'
 
-class PageController
+class ApplicationController < Garbanzo::Controller
+end
+
+class PageController < ApplicationController
   def index(_params)
     'hi'
   end
 
   def show(params)
-    "name is equal to #{params['name']}"
+    @params = params
+    erb :show
   end
 end
 

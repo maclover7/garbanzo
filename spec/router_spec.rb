@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Garbanzo::Router do
-  class PageController
+  class GarbanzoRouterTestController
     def index
       puts 'hi'
     end
@@ -11,7 +11,7 @@ describe Garbanzo::Router do
     context 'in general' do
       before do
         @router = Garbanzo::Router.new do
-          get '/', PageController, :index
+          get '/', GarbanzoRouterTestController, :index
         end
       end
 
@@ -23,7 +23,7 @@ describe Garbanzo::Router do
     context 'no parameters' do
       before do
         @router = Garbanzo::Router.new do
-          get '/', PageController, :index
+          get '/', GarbanzoRouterTestController, :index
         end
       end
 
@@ -56,7 +56,7 @@ describe Garbanzo::Router do
     context 'with parameters' do
       before do
         @router = Garbanzo::Router.new do
-          get '/pages/:name', PageController, :index
+          get '/pages/:name', GarbanzoRouterTestController, :index
         end
       end
 
